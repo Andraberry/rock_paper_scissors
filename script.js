@@ -70,3 +70,42 @@ function playMatch() {
   });
 }
 playMatch();
+function playRound(playerChoice, computerChoice) {
+  const gameResult = document.getElementById("gameResult");
+  const restartBtn = document.getElementById("restart");
+  if (playerScore === 5 || computerScore === 5) {
+    match.style.display = "none";
+    if (playerScore === 5) {
+      gameResult.textContent = "You've won this round";
+    } else {
+      gameResult.textContent = "You've lost this round";
+    }
+    restartBtn.addEventListener("click", restartGame);
+    restart.style.display = "block";
+  }
+  if (playerChoice === computerChoice) {
+    choiceUpdate.textContent = "It's a tie";
+    winner = "tie";
+    return; //used to end the function
+  }
+  if (
+    (playerChoice === "rock" && computerChoice === "scissors") ||
+    (playerChoice === "scissors" && computerChoice === "paper") ||
+    (playerChoice === "paper" && computerChoice === "rock")
+  ) {
+    playerScore++;
+    choiceUpdate.textContent = "You win";
+    plyScore.textContent = "Player: " + playerScore;
+    winner = "player";
+  } else if (
+    (computerChoice === "rock" && playerChoice === "scissors") ||
+    (computerChoice === "scissors" && playerChoice === "paper") ||
+    (computerChoice === "paper" && playerChoice === "rock")
+  ) {
+    choiceUpdate.textContent = "Computer wins";
+    computerScore++;
+    compScore.textContent = "Computer: " + computerScore;
+    winner = "computer";
+    return;
+  }
+}
