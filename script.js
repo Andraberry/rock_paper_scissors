@@ -37,3 +37,36 @@ function getRandomChoice() {
     computerIcon.textContent = "✌🏿";
   }
 }
+function playMatch() {
+  const rock = document.getElementById("rock");
+  const paper = document.getElementById("paper");
+  const scissors = document.getElementById("scissors");
+
+  rock.addEventListener("click", () => {
+    playerIcon.textContent = "✊🏿";
+    playerChoice = "rock";
+    getRandomChoice();
+    computerChoice = randomNumber;
+    playRound(playerChoice, computerChoice);
+    updateScoreMessage(winner, playerChoice, computerChoice);
+  });
+
+  paper.addEventListener("click", () => {
+    playerIcon.textContent = "✋🏿";
+    playerChoice = "paper";
+    getRandomChoice();
+    computerChoice = randomNumber;
+    console.log(randomNumber);
+    playRound(playerChoice, computerChoice);
+    updateScoreMessage(winner, playerChoice, computerChoice);
+  });
+  scissors.addEventListener("click", () => {
+    playerIcon.textContent = "✌🏿";
+    playerChoice = "scissors";
+    getRandomChoice();
+    computerChoice = randomNumber;
+    playRound(playerChoice, computerChoice);
+    updateScoreMessage(winner, playerChoice, computerChoice);
+  });
+}
+playMatch();
