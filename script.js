@@ -130,3 +130,16 @@ function updateScoreMessage(winner, playerSelection, computerSelection) {
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
+//Restart game function
+function restartGame() {
+  restart.style.display = "none";
+  match.style.display = "block";
+  playerScore = 0;
+  computerScore = 0;
+  choiceUpdate.textContent = "Make your selection";
+  scoreMessage.textContent = "First to score 5 points wins the game";
+  plyScore.textContent = "Player: " + playerScore;
+  compScore.textContent = "Computer: " + computerScore;
+  computerIcon.textContent = "❔";
+  playerIcon.textContent = "❔";
+}
