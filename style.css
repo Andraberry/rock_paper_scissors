@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  background-color: rgb(237, 146, 146);
+}
+.header {
+  background-color: rgb(76, 2, 2);
+  height: 100px;
+  width: 100vw;
+  color: yellow;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header h1 {
+  font-size: 38px;
+}
+
+#rpsGame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#rpsGame h2 {
+  color: white;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 30px;
+}
+#rpsGame p {
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  font-size: 22px;
+}
+#players {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  align-items: center;
+  margin: 10px 0;
+}
+#playerScore,
+#computerScore {
+  font-weight: 700;
+  color: yellow;
+  font-size: 20px;
+  margin: 10px;
+}
+#gameIcon {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+#gameIcon div {
+  background-color: yellow;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+#gameIcon span,
+#computerIcon,
+#playerIcon {
+  font-size: 45px;
+}
+#gameIcon div:hover {
+  box-shadow: 1px 1px 5px rgba(6, 6, 6, 0.7);
+  background-color: rgb(76, 2, 2);
+}
+#player,
+#computer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  background-color: yellow;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-family: cursive;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-size: 20px;
+}
