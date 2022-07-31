@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./script.js"></script>
+  <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1>ROCK PAPER SCISSOR</h1>
+  </header>
+  <section id="rpsGame">
+    <div class="intro">
+      <h1>Are you ready!</h1>
+      <button class="startBtn">Let's play</button>
+    </div>
+    <div class="match fadeout">
+      <h2 id="para">Make your selection</h2>
+      <p id="para1">First to score 5 points wins the game</p>
+      <p id="text"></p>
+      <div id="players">
+        <div id="player">
+          <div id="playerIcon">❔</div>
+          <div id="playerScore">Player: 0</div>
+        </div>
+        <div id="computer">
+          <div id="computerIcon">❔</div>
+          <div id="computerScore">Computer: 0</div>
+
+        </div>
+      </div>
+      <div id="gameIcon">
+        <div id="rock"><span>✊🏿</span></div>
+        <div id="paper"><span>✋🏿</span></div>
+        <div id="scissors"><span>✌🏿</span></div>
+      </div>
+    </div>
+    <div class="restart-container">
+      <p id="gameResult"></p>
+      <button id="restart">Play Again</button>
+    </div>
+  </section>
+
+  <footer>Copyright &copy; Andraberry</footer>
+</body>
+
+
+</html>
