@@ -109,3 +109,24 @@ function playRound(playerChoice, computerChoice) {
     return;
   }
 }
+function updateScoreMessage(winner, playerSelection, computerSelection) {
+  if (winner === "player") {
+    scoreMessage.textContent = `${capitalizeFirstLetter(
+      playerSelection,
+    )} beats ${computerSelection.toLowerCase()}`;
+    return;
+  }
+  if (winner === "computer") {
+    scoreMessage.textContent = `${capitalizeFirstLetter(
+      playerSelection,
+    )} is beaten by ${computerSelection.toLowerCase()}`;
+    return;
+  }
+
+  scoreMessage.textContent = `${capitalizeFirstLetter(
+    playerSelection,
+  )} ties with ${computerSelection.toLowerCase()}`;
+}
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+}
